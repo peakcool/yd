@@ -1,0 +1,17 @@
+.navbar {
+	background-color: rgb(253, 89, 89) !important;
+}
+
+.title {
+	color : #fff;
+	font-weight: 900;
+}
+
+.page-content {
+	background-color: rgb(245, 246, 247) !important;
+
+}
+
+.bottom-active {
+	color: rgb(253, 89, 89) !important;
+}
