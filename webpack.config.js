@@ -2,6 +2,7 @@ var fs = require('fs');
 var path = require('path')
 var webpack = require('webpack')
 
+//清除build下发布内容
 var buildPath = './build/';
 var folder_exists = fs.existsSync(buildPath);
 if (folder_exists == true) {
@@ -43,8 +44,8 @@ var plugins = [
     }),
     //会将所有的样式文件打包成一个单独的style.css
     new ExtractTextPlugin(production ? "style.[hash].css" : "style.css", {
-        disable: false //,
-            //allChunks: true  //所有独立样式打包成一个css文件
+        disable: false, //,
+        // allChunks: true  //所有独立样式打包成一个css文件
     }),
     //new ExtractTextPlugin("[name].css" )
     //自动分析重用的模块并且打包成单独的文件
@@ -76,16 +77,13 @@ if (process.env.PRODUCTION) {
  */
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 //HtmlWebpackPlugin文档 https://www.npmjs.com/package/html-webpack-plugin
+
 //https://github.com/ampedandwired/html-webpack-plugin/issues/52
-plugins.push(new HtmlWebpackPlugin({
-    filename: '../index.html', //会生成d.html在根目录下,并注入脚本
-    // template: '../index.tpl',
-    inject: true //此参数必须加上，不加不注入
-}));
-
-var config = {
-
-}
+// plugins.push(new HtmlWebpackPlugin({
+//     filename: '../index.html', //会生成d.html在根目录下,并注入脚本
+//     // template: '../index.tpl',
+//     inject: true //此参数必须加上，不加不注入
+// }));
 
 var config = {
     entry: './src/app.js',
@@ -133,15 +131,21 @@ var config = {
             loader: 'babel'
         }, {
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!cssnext-loader")
-        }]
+            loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!postcss-loader")
+        }, {
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!sass-loader'),
+        }
+
+        ]
     },
     vue: {
-        css: ExtractTextPlugin.extract("style-loader",
-            "css-loader?sourceMap!cssnext-loader"),
         loaders: {
             scss: 'style!css!sass',
-        }
+        },
+        css: ExtractTextPlugin.extract("style-loader",
+            "css-loader?sourceMap!cssnext-loader")
+        
     },
     devServer: {
         historyApiFallback: true,

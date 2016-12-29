@@ -1,5 +1,5 @@
 require('./static/css/common.css');
-require('../node_modules/vonic/ionic/css/ionic.css');
+require('./static/css/ionic.css');
 
 var Vue = require('vue');
 var Vonic = require('vonic');
