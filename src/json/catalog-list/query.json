@@ -1,0 +1,37 @@
+{
+    "status" : 200,
+    "msg" : "" ,
+    "data": [{
+        "id" : 4,
+		"icon" : "https://gw.alicdn.com/tps/i4/TB1WC4tHFXXXXXDXFXXmqjTHFXX-60-60.png",
+        "name" : "围巾"
+    },{
+    	"id" : 5,
+		"icon" : "https://gw.alicdn.com/tps/i3/TB1hn8sHFXXXXaZXFXXmqjTHFXX-60-60.png",
+		"name" : "手套"
+    },{
+		"id" : 6,
+		"icon" : "https://gw.alicdn.com/tps/i1/TB1jtBmHFXXXXcTXVXXmqjTHFXX-60-60.png",
+		"name" : "帽子"
+	},{
+		"id" : 7,
+		"icon" : "https://gw.alicdn.com/tps/i2/TB1WX4yHFXXXXamXXXXmqjTHFXX-60-60.png",
+		"name" : "项链"
+	},{
+		"id" : 8,
+		"icon" : "https://gw.alicdn.com/tps/i2/TB1CRZlHpXXXXapXVXXIpPTHFXX-60-60.jpg",
+		"name" : "发饰"
+	},{
+		"id" : 9,
+		"icon" : "https://gw.alicdn.com/tps/i1/TB1jtBmHFXXXXcTXVXXmqjTHFXX-60-60.png",
+		"name" : "首饰"
+	},{
+		"id" : 10,
+		"icon" : "https://gw.alicdn.com/tps/i2/TB1WX4yHFXXXXamXXXXmqjTHFXX-60-60.png",
+		"name" : "耳饰"
+	},{
+		"id" : 11,
+		"icon" : "https://gw.alicdn.com/tps/i2/TB1CRZlHpXXXXapXVXXIpPTHFXX-60-60.jpg",
+		"name" : "瓷宝贝"
+	}]
+}

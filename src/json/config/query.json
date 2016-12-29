@@ -1,0 +1,16 @@
+{
+	"debug": false,
+	"beta": false,
+	"appId": "wxa4667361d02a7d3b",
+	"nonceStr": "mUxcwpG7tB",
+	"timestamp": 1481720849,
+	"url": "http://www.buynb.cn/config",
+	"signature": "369aaf00093e60d84266db4a8a342b8527814e49",
+		"jsApiList": [
+		"onMenuShareQQ",
+		"onMenuShareWeibo",
+		"onMenuShareTimeline",
+		"onMenuShareAppMessage",
+		"onMenuShareQZone"
+	]
+}

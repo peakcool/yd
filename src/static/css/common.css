@@ -9,9 +9,12 @@
 
 .page-content {
 	background-color: rgb(245, 246, 247) !important;
-
 }
 
-.bottom-active {
+.active {
 	color: rgb(253, 89, 89) !important;
+}
+
+.no-active {
+	color: #797979;
 }
