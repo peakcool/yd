@@ -81,7 +81,7 @@ var paramParse = function(method, resourceName, param) {
 
 
 module.exports = {
-    article_details: {
+    article: {
         query: function(param) {
             paramParse('query', ['article-details'], param);
         }
@@ -89,6 +89,11 @@ module.exports = {
     article_recommend: {
         query: function(param) {
             paramParse('query', ['article-recommend'], param);
+        }
+    },
+    strategy : {
+        query: function(param) {
+            paramParse('query', ['strategy'], param);
         }
     }
 }

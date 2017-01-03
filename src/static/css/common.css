@@ -26,3 +26,7 @@
 .list:last-child.card {
     margin-bottom: 65px !important; 
 }
+
+.list:first-child.card {
+    margin-top: 10px !important; 
+}
