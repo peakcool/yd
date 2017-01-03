@@ -148,8 +148,7 @@ var config = {
         
     },
     devServer: {
-        historyApiFallback: true,
-        noInfo: true
+        proxy: {}
     },
     plugins : plugins,
     devtool: '#eval-source-map'

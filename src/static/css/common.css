@@ -18,3 +18,11 @@
 .no-active {
 	color: #797979;
 }
+
+.card {
+	margin: 20px 0 !important;
+}
+
+.list:last-child.card {
+    margin-bottom: 65px !important; 
+}

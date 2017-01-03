@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --progress --profile --colors --inline --port=8081",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "mockdev": "export LOCALREST=1 && webpack-dev-server --progress --profile --colors --inline --port=8081"
+    "mockdev": "export LOCALREST=1 && webpack-dev-server --progress --profile --colors --inline --port=8082"
   },
   "dependencies": {
     "vonic": "^0.5.1",

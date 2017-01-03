@@ -18,7 +18,7 @@ var paramParse = function(method, resourceName, param) {
         method: 'GET',
         url: ''
     };
-    param.key = param.key||[];
+    param.key = param.key || [];
     switch (method) {
         case 'query':
             resource.method = 'GET';
@@ -55,29 +55,40 @@ var paramParse = function(method, resourceName, param) {
     if (param.data) {
         resource.data = param.data;
     }
-     v.$http(resource).then(function(response) {
+
+    v.$http(resource).then(function(response) {
         var rs = response.data;
+
         if (rs.status == 200) {
-            if(param.succ){
-                param.succ(rs['data']||{});
+            if (param.succ) {
+                param.succ(rs['data'] || {});
             }
         } else {
             if (param.err) {
                 param.err(rs.msg);
-            } 
+            }
         }
     }, function(response) {
         if (param.err) {
-            if(response.statusText != "") {
-                 param.err(response.statusText);
+            if (response.statusText != "") {
+                param.err(response.statusText);
             } else {
-                Common.tips("网络错误,请重试!","error",1500);
+                Common.tips("网络错误,请重试!", "error", 1500);
             }
-        } 
+        }
     });
 };
 
 
 module.exports = {
-
+    article_details: {
+        query: function(param) {
+            paramParse('query', ['article-details'], param);
+        }
+    },
+    article_recommend: {
+        query: function(param) {
+            paramParse('query', ['article-recommend'], param);
+        }
+    }
 }
