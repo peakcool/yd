@@ -24,9 +24,23 @@
 }
 
 .list:last-child.card {
-    margin-bottom: 65px !important; 
+    margin-bottom: 15px !important; 
 }
 
 .list:first-child.card {
     margin-top: 10px !important; 
 }
+
+.ion-ios-arrow-back {
+	color:#fff !important;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+/*.item-about {
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+}*/

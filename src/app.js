@@ -9,9 +9,13 @@ const routers = {
 	'/' : {
 		component : require('./app.vue'),
 	},
-	'/wearing' : {
-		name : 'wearing',
-		component : require('./components/wearing/Index.vue')
+	'article/:id' : {
+		name : 'article',
+		component : require('./components/articles/articleDetails.vue')
+	},
+	'goods/:id' : {
+		name : 'goods',
+		component : require('./components/goods/goodsDetails.vue')
 	},
 	'/women' : {
 		name : 'women',

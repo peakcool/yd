@@ -1,11 +1,11 @@
 <template>
     <div class="page has-navbar page-swiper" v-tabbar="{'menus': menus, menuColor: '#888', activeMenuColor: '#FF4400', onMenuClick: menuClicked}">
         <yd-common :index="index"></yd-common>
+        <router-view></router-view>
     </div>
 </template>
 <script>
 var gloalStore = require('./vuex/store.js');
-
 var commonActions = require('./vuex/common/actions.js');
 module.exports = {
     store : gloalStore, //注入store
@@ -30,7 +30,7 @@ module.exports = {
     },
     vuex : {
         actions : {
-           setTplIndex : commonActions.setTplIndex
+           setTplIndex : commonActions.setTplIndex //设置组件编号
         }
     },
     components: {

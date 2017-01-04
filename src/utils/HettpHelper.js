@@ -95,5 +95,10 @@ module.exports = {
         query: function(param) {
             paramParse('query', ['strategy'], param);
         }
+    },
+    goods: {
+        query: function(param) {
+            paramParse('query', ['goods-details'], param);
+        }
     }
 }

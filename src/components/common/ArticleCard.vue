@@ -1,5 +1,5 @@
 <template>
-<div class="list card">
+<a class="list card" href="#!/article/{{ item.id }}">
 	<div class="item item-avatar">
 	    <h2>{{ item.title }}</h2>
 	    <p>{{fromNow(item.releasetime)}}</p>
@@ -10,10 +10,11 @@
 		  	<a href="javascript:void(0)" class="subdued"><i class="icon ion-heart"></i>&nbsp;{{ item.like }}</a>
 		</p>
 	</div>
-</div>
+</a>
 </template>
 
 <script>
+    var common = require('../../utils/Common.js');
 	module.exports = {
 		props : {
 			item : Object

@@ -1,6 +1,7 @@
 //创建对象保存应用所需数据
 var state = {
-	articles : [] //文章数据
+	articles : [], //文章数据
+	articleDetails : [] //文章详细信息
 };
 
 var mutations = {
@@ -9,6 +10,12 @@ var mutations = {
 	 */
 	SET_ARTICLES : function (state, obj) {
 		state.articles = obj;
+	},
+	/**
+	 * 设置文章详细信息
+	 */
+	SET_ARTICLE_DETAILS : function (state, obj) {
+		state.articleDetails = obj;
 	}
 };
 

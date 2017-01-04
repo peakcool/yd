@@ -6,11 +6,13 @@ Vue.use(Vuex);
 
 var common = require('./common/store.js');
 var articles = require('./articles/store.js');
+var goods = require('./goods/store.js');
 
 module.exports = new Vuex.Store({
 	//组合模块
 	modules : {
 		common : common,
-		articles : articles
+		articles : articles,
+		goods : goods
 	}
 });
