@@ -23,9 +23,9 @@
 	margin: 20px 0 !important;
 }
 
-.list:last-child.card {
+/*.list:last-child.card {
     margin-bottom: 15px !important; 
-}
+}*/
 
 .list:first-child.card {
     margin-top: 10px !important; 
@@ -39,8 +39,31 @@ a {
 	text-decoration: none !important;
 }
 
-/*.item-about {
+.card .item-body p .button {
+	float: right;
+	color: #fd5959;
+	border-color: #fd5959;
+	font-size: 14px;
+}
+
+.item-about {
 	overflow: hidden !important;
 	text-overflow: ellipsis !important;
 	white-space: nowrap !important;
-}*/
+}
+
+.goods-bottom {
+	border-style: none !important;
+	background-size: 0 !important;
+	background-color: #fff !important;
+	padding: 0 !important;
+}
+
+.goods-bottom a {
+	color: #fd5959;
+}
+
+.goods-bottom .go-buy {
+	background-color: #fb0000 !important;
+	color: #fff;
+}

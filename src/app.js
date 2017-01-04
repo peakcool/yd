@@ -11,11 +11,11 @@ const routers = {
 	},
 	'article/:id' : {
 		name : 'article',
-		component : require('./components/articles/articleDetails.vue')
+		component : require('./components/articles/ArticleDetails.vue')
 	},
 	'goods/:id' : {
 		name : 'goods',
-		component : require('./components/goods/goodsDetails.vue')
+		component : require('./components/goods/GoodsDetails.vue')
 	},
 	'/women' : {
 		name : 'women',

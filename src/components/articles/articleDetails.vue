@@ -1,5 +1,5 @@
 <template>
-  <div class="page has-navbar has-tabbar" v-nav="{title: '搭配详情', showBackButton: true}">
+  <div class="page has-navbar" v-nav="{title: '搭配详情', showBackButton: true}">
     <div class="page-content padding-top">
       	<yd-goods-card  v-for="goods in article" :item="goods"></yd-goods-card> 
     </div>
