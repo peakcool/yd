@@ -42,10 +42,10 @@
 			'yd-article-card' : require('../common/ArticleCard.vue')
 		},
 		ready : function (){
-			if (this.articles.length < 1) {
+			if (this.getArticles.length < 1) {
 				this.queryArticles();
 			} else {
-				this.articles = getArticles;
+				this.articles = this.getArticles;
 			}
 		}
 	}

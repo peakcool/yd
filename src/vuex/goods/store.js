@@ -1,6 +1,7 @@
 //创建对象保存应用所需数据
 var state = {
-	goodsDetails : [] //文章详细信息
+	goodsDetails : [], //商品详细信息
+	goodsList : [] //商品列表
 };
 
 var mutations = {
@@ -10,6 +11,13 @@ var mutations = {
 	 */
 	SET_GOODS_DETAILS : function (state, obj) {
 		state.goodsDetails = obj;
+	},
+
+	/**
+	 * 设置商品列表
+	 */
+	SET_GOODS_LIST : function (state, obj) {
+		state.goodsList = obj;
 	}
 };
 
