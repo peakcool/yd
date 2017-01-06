@@ -20,19 +20,7 @@ const routers = {
 	'/catalog' : {
 		name : 'catalog',
 		component : require('./components/catalog/Index.vue')
-	},
-	'/catalog/:id' : {
-		name : 'catalog-goods',
-		component : require('./components/catalog/Catalog-Goods.vue')
-	},
-	'/women' : {
-		name : 'women',
-		component : require('./components/women/Index.vue')
-	},
-	'/shoe' : {
-		name : 'shoe',
-		component : require('./components/shoe/Index.vue')
-	},
+	}
 };
 
 Vue.use(Vonic.app, {routers: routers, defaultRouterUrl: '/'})

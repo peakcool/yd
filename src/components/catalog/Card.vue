@@ -31,6 +31,11 @@ import {Cells} from 'vonic'
                 var line = "<div class='entrance'><img src='" + self.getCatalogList[c].icon + "' alt='' /><span>" + self.getCatalogList[c].name + "</span></div>";
                 this.catalog.push(line);
             }
+        },
+        methods : {
+            onCellClick() {
+                this.$router.go('/goods/1');
+          }
         }
     }
 </script>
