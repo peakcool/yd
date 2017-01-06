@@ -105,5 +105,15 @@ module.exports = {
         query: function(param) {
             paramParse('query', ['goods-list'], param);
         }
+    },
+    catalog : {
+        query : function(param) {
+            paramParse('query', ['catalog-list'], param);
+        }
+    },
+    catalog_goods : {
+        query : function(param) {
+            paramParse('query', ['catalog-goods'], param);
+        }
     }
 }
