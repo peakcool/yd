@@ -6,17 +6,9 @@
 
 <script>
 
-import {Cells} from 'vonic'
-    var http = require('../../utils/HettpHelper.js');
-    var common = require('../../utils/Common.js');
-    var gloalStore = require('../../vuex/store.js');
-    var catalogGetters = require('../../vuex/catalog/getters.js');
+    import {Cells} from 'vonic'
     module.exports = {
-        vuex : {
-            getters : {
-                getCatalogList : catalogGetters.getCatalogList
-            }
-        },
+        props : ['catalogList'],
         data : function() {
             return {
                 catalog : [],
@@ -27,10 +19,12 @@ import {Cells} from 'vonic'
         },
         ready : function (){
             var self = this;
-            for (var c in self.getCatalogList) {
-                var line = "<div class='entrance'><img src='" + self.getCatalogList[c].icon + "' alt='' /><span>" + self.getCatalogList[c].name + "</span></div>";
-                this.catalog.push(line);
-            }
+            self.$watch("catalogList", function(v){
+                for (var c in self.catalogList) {
+                    var line = "<div class='entrance'><img src='" + self.catalogList[c].icon + "' alt='' /><span>" + self.catalogList[c].name + "</span></div>";
+                    this.catalog.push(line);
+                }
+            });
         },
         methods : {
             onCellClick() {

@@ -1,5 +1,5 @@
 <template>
-  <div class="page has-navbar has-tabbar" v-nav="{title: '穿搭攻略'}">
+  <div class="page has-navbar has-tabbar" v-nav="{title: '穿搭攻略'}" v-tabbar-menu-index="0">
     <div class="page-content padding-top">
       	<yd-article-card  v-for="article in articles" :item="article"></yd-article-card> 
     </div>
@@ -39,7 +39,7 @@
 			}
 		},
 		components : {
-			'yd-article-card' : require('../common/ArticleCard.vue')
+			'yd-article-card' : require('../articles/ArticleCard.vue')
 		},
 		ready : function (){
 			if (this.getArticles.length < 1) {

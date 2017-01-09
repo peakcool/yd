@@ -8,7 +8,7 @@
                 <img class="full-image" src="{{ item.cover }}">
                 <p class="item-about">{{ item.about }}</p>
                 <p>
-                    <a href="javascript:void(0)" class="subdued"><i class="icon ion-heart"></i>&nbsp;{{ item.like }}</a>
+                    <!-- <a href="javascript:void(0)" class="subdued"><i class="icon ion-heart"></i>&nbsp;{{ item.like }}</a> -->
                     <a href="javascript:void(0)" class="subdued"><i class="icon ion-social-yen"></i>&nbsp;{{ item.price }}</a>
                     <md-button class="button button-calm button-outline" @click="clicked()">
 					    立即购买

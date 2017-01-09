@@ -1,7 +1,7 @@
 <template>
 	<div class="page has-navbar has-tabbar" v-nav="{title: '女装 · 分类',showBackButton: true}">
 		<div class="page-content">
-			<yd-catalog-card></yd-catalog-card>
+			<yd-catalog-card :catalog-list="getCatalogList"></yd-catalog-card>
 		</div>
 	</div>
 </template>
@@ -10,11 +10,9 @@
 
 	var http = require('../../utils/HettpHelper.js');
 	var common = require('../../utils/Common.js');
-	var gloalStore = require('../../vuex/store.js');
 	var catalogActions = require('../../vuex/catalog/actions.js');
 	var catalogGetters = require('../../vuex/catalog/getters.js');
 	module.exports = {
-		store : gloalStore, //注入store
 		vuex : {
 			getters : {
 				getCatalogList : catalogGetters.getCatalogList
@@ -49,6 +47,10 @@
 			} else {
 				this.catalog = this.getCatalogList;
 			}
+
+			this.$watch("catalog" , function (v) {
+               console.log("catalog.watch:%0",v);
+            });
 		}
 	}
 </script>

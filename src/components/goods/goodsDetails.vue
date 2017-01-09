@@ -19,12 +19,10 @@
 <script>
 var http = require('../../utils/HettpHelper.js');
 var common = require('../../utils/Common.js');
-var gloalStore = require('../../vuex/store.js');
 var goodsActions = require('../../vuex/goods/actions.js');
 var goodsGetters = require('../../vuex/goods/getters.js');
 
 module.exports = {
-    store: gloalStore, //注入store
     vuex: {
         getters: {
             getGoodsDetails: goodsGetters.getGoodsDetails
@@ -51,7 +49,7 @@ module.exports = {
         }
     },
     components: {
-        'yd-goods-details-card': require('../common/GoodsDetailsCard.vue')
+        'yd-goods-details-card': require('./GoodsDetailsCard.vue')
     },
     ready: function() {
         if (this.goods.length < 1) {

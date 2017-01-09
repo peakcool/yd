@@ -40,7 +40,7 @@ module.exports = {
         }
     },
     components: {
-        'yd-goods-card': require('../common/GoodsCard.vue'),
+        'yd-goods-card': require('../goods/GoodsCard.vue'),
     },
     methods: {
         toggleSidebar : function () {

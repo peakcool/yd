@@ -176,4 +176,5 @@ if (process.env.LOCALREST) {
 } else {
     console.log("Use backend RESTful interface!");
 }
+
 module.exports = config;

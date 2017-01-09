@@ -41,7 +41,7 @@
 			}
 		},
 		components : {
-			'yd-goods-card' : require('../common/GoodsCard.vue')
+			'yd-goods-card' : require('../goods/GoodsCard.vue')
 		},
 		ready : function (){
 			if (this.article.length < 1) {

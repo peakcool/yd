@@ -53,6 +53,7 @@ a {
 	background-size: 0 !important;
 	background-color: #fff !important;
 	padding: 0 !important;
+	z-index: 999 !important;
 }
 
 .goods-bottom a {
