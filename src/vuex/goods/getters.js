@@ -6,5 +6,9 @@ module.exports = {
 
 	getGoodsList : function (state) {
 		return state.goods.goodsList;
+	},
+
+	getCatalogGoodsList : function (state) {
+		return state.goods.catalogGoodsList;
 	}
 }

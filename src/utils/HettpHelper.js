@@ -115,5 +115,10 @@ module.exports = {
         query : function(param) {
             paramParse('query', ['catalog-goods'], param);
         }
+    },
+    goods_shoe : {
+        query : function(param) {
+            paramParse('query', ['goods-shoe'], param);
+        }
     }
 }

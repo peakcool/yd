@@ -1,5 +1,5 @@
 <template>
-	<div class="page has-navbar has-tabbar" v-nav="{title: '女装 · 分类',showBackButton: true}">
+	<div class="page has-navbar has-tabbar" v-nav="{title: '衣调 · 分类',showBackButton: true}">
 		<div class="page-content">
 			<yd-catalog-card :catalog-list="getCatalogList"></yd-catalog-card>
 		</div>
@@ -47,10 +47,6 @@
 			} else {
 				this.catalog = this.getCatalogList;
 			}
-
-			this.$watch("catalog" , function (v) {
-               console.log("catalog.watch:%0",v);
-            });
 		}
 	}
 </script>

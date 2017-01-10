@@ -9,15 +9,15 @@ const routers = {
     '/': {
         component: require('./app.vue'),
         subRoutes: {
-            '/wearing': {
+            'wearing': {
                 name: 'wearing',
                 component: require('./components/wearing/Index.vue')
             },
-            '/women': {
+            'women': {
                 name: 'women',
                 component: require('./components/women/Index.vue')
             },
-            '/shoe': {
+            'shoe': {
                 name: 'shoe',
                 component: require('./components/shoe/Index.vue')
             },
@@ -29,13 +29,19 @@ const routers = {
                 name: 'goods',
                 component: require('./components/goods/GoodsDetails.vue')
             },
-            '/catalog': {
+            'catalog': {
                 name: 'catalog',
-                component: require('./components/catalog/Index.vue')
+                component: require('./components/catalog/Index.vue'),
+                subRoutes: {
+                    
+                }
             },
+            'catalog/:id': {
+                name: 'catalog',
+                component: require('./components/goods/GoodsCatalog.vue')
+            }
         }
-    },
-
+    }
 };
 
 Vue.use(Vonic.app, { routers: routers, defaultRouterUrl: '/' })

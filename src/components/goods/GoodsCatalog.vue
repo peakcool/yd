@@ -1,5 +1,5 @@
 <template>
-    <div class="page has-navbar has-tabbar" v-nav="{title: '鞋包配饰', showMenuButton: true, menuButtonText : menuButton, onMenuButtonClick: toggleSidebar}">
+    <div class="page has-navbar has-tabbar" v-nav="{title: '女装', showMenuButton: true, menuButtonText : menuButton, onMenuButtonClick: toggleSidebar}">
         <div class="page-content padding-top">
             <yd-goods-card v-for="goods in goodsList" :item="goods"></yd-goods-card>
         </div>
@@ -14,10 +14,10 @@ var goodsGetters = require('../../vuex/goods/getters.js');
 module.exports = {
     vuex: {
         getters: {
-            getGoodsList: goodsGetters.getGoodsList
+            getCatalogGoodsList: goodsGetters.getCatalogGoodsList
         },
         actions: {
-            setGoodsList: goodsActions.setGoodsList
+            setCatalogGoodsList: goodsActions.setCatalogGoodsList
         }
     },
     data: function() {
@@ -27,9 +27,10 @@ module.exports = {
             goodsList: [],
             queryGoods: function() {
                 var self = this;
-                http.goods_shoe.query({
+                http.catalog_goods.query({
                     succ: function(rs) {
-                        self.setGoodsList(rs.list);
+                    	console.log(rs);
+                        self.setCatalogGoodsList(rs.list);
                         self.goodsList = rs.list;
                     },
                     err: function(msg) {
@@ -48,12 +49,7 @@ module.exports = {
         },
     },
     ready: function() {
-        if (this.getGoodsList.length < 1) {
-            this.queryGoods();
-        } else {
-            this.goodsList = this.getGoodsList;
-        }
-
+        this.queryGoods();
     }
 }
 </script>

@@ -1,56 +1,36 @@
+<style>
+    .classify-list{
+        position: fixed;
+        display: flex;
+        top:2.25rem;
+        left: 0;
+        right: 0;
+        bottom: 2rem;
+        z-index: 7;
+        background-color: #fff;
+        flex-wrap:wrap;
+        align-content: flex-start;
+    }
+    .classify-list .classify-item:nth-child(2n+1){
+        border-right:1px solid #eee;
+    }
+</style>
 <template>
-  <div>
-    <cells :items="catalog" :on-cell-click="onCellClick"></cells>
-  </div>
+<div class="classify-list">
+    <yd-catalog-item v-for="el in catalogList" :catalog="el" @click="catalogChange(el.id)"></yd-catalog-item>
+</div>
 </template>
 
 <script>
-
-    import {Cells} from 'vonic'
     module.exports = {
         props : ['catalogList'],
-        data : function() {
-            return {
-                catalog : [],
-            }
-        },
         components : {
-            Cells
-        },
-        ready : function (){
-            var self = this;
-            self.$watch("catalogList", function(v){
-                for (var c in self.catalogList) {
-                    var line = "<div class='entrance'><img src='" + self.catalogList[c].icon + "' alt='' /><span>" + self.catalogList[c].name + "</span></div>";
-                    this.catalog.push(line);
-                }
-            });
+            "yd-catalog-item" : require('./Item.vue')
         },
         methods : {
-            onCellClick() {
-                this.$router.go('/goods/1');
-          }
+            catalogChange : function (id){
+                this.$router.go('catalog/' + id);
+            }
         }
     }
 </script>
-
-<style lang="scss">
-    .entrance {
-    height: 120px;
-    padding: 35px 0;
-
-    .icon {
-      font-size: 30px;
-      line-height: 30px;
-      width: 30px;
-      height: 30px;
-      margin-bottom: 6px;
-    }
-
-    span {
-      font-size: 14px;
-      line-height: 14px;
-    }
-
-  }
-</style>

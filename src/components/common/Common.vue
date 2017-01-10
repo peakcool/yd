@@ -25,15 +25,10 @@ module.exports = {
                 text: '鞋包配饰',
                 path: '/shoe'
             }],
-            index : 0,
         }
     },
     components: {
       List, Item, 
-    },
-    methods: {
-        menuClicked(menuIndex) {
-        }
     },
     beforeDestroy() {
         $tabbar.$emit('hideTabbar')

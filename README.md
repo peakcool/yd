@@ -22,8 +22,11 @@ $ npm run mockdev
 ```bash
 $ npm run build
 ```
+index.html 文件head中写入:
 
-index.html 文件中写入:
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+index.html 文件body中写入:
 
 	<von-app></von-app>
 

@@ -3,15 +3,15 @@ var path = require('path')
 var webpack = require('webpack')
 
 //清除build下发布内容
-var buildPath = './build/';
-var folder_exists = fs.existsSync(buildPath);
-if (folder_exists == true) {
-    var dirList = fs.readdirSync(buildPath);
-    dirList.forEach(function(fileName) {
-        fs.unlinkSync(buildPath + fileName);
-    });
-    console.log("clearing " + buildPath);
-};
+// var buildPath = './build/';
+// var folder_exists = fs.existsSync(buildPath);
+// if (folder_exists == true) {
+//     var dirList = fs.readdirSync(buildPath);
+//     dirList.forEach(function(fileName) {
+//         fs.unlinkSync(buildPath + fileName);
+//     });
+//     console.log("clearing " + buildPath);
+// };
 
 //readfile
 //先把index.html里面关于style和js的hash值都删除掉，避免在使用 npm run dev 的时候，路径还是压缩后的路劲
@@ -79,12 +79,12 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 //HtmlWebpackPlugin文档 https://www.npmjs.com/package/html-webpack-plugin
 
 //https://github.com/ampedandwired/html-webpack-plugin/issues/52
-plugins.push(new HtmlWebpackPlugin({
-    title : 'yd-Demo',
-    filename: '../index.html', //会生成d.html在根目录下,并注入脚本
-    // template: '../index.tpl',
-    inject: true //此参数必须加上，不加不注入
-}));
+// plugins.push(new HtmlWebpackPlugin({
+//     title : 'yd-Demo',
+//     filename: '../index.html', //会生成d.html在根目录下,并注入脚本
+//     // template: '../index.tpl',
+//     inject: true //此参数必须加上，不加不注入
+// }));
 
 var config = {
     entry: './src/app.js',
