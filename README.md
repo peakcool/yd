@@ -1,6 +1,6 @@
 # yd
 
-> Vonic + Webpack + Cordova
+> Vonic + Webpack
 
 ### 开始
 ```bash
@@ -22,6 +22,10 @@ $ npm run mockdev
 ```bash
 $ npm run build
 ```
+
+index.html 文件中写入:
+
+	<von-app></von-app>
 
 ### 感谢
 
