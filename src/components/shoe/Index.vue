@@ -48,12 +48,7 @@ module.exports = {
         },
     },
     ready: function() {
-        if (this.getGoodsList.length < 1) {
-            this.queryGoods();
-        } else {
-            this.goodsList = this.getGoodsList;
-        }
-
+        this.queryGoods();
     }
 }
 </script>

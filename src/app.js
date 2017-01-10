@@ -44,4 +44,4 @@ const routers = {
     }
 };
 
-Vue.use(Vonic.app, { routers: routers, defaultRouterUrl: '/' })
+Vue.use(Vonic.app, { routers: routers, defaultRouterUrl: '/' });
